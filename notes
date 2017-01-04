@@ -1,0 +1,11 @@
+lsusb
+iwconfig
+airmon-ng check kill
+airmon-ng start wlan0
+airmon-ng start wlan0 6
+airmon-ng stop wlan0mon
+ifconfig wlan0 up
+airodump wlan0mon
+python app2.py -n -v -i wlan0mon
+
+scan only WPS enabled device
